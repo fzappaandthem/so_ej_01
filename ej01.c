@@ -103,20 +103,21 @@ char* string_concat(const char *w1, const char *w2)
 void concatenarDosStringsEnElTercerParametro()
 {
     char w1[SIZE], w2[SIZE];
-    char **result = malloc(sizeof(char) * (strlen(w1) + strlen(w2)));
+    char *result[1];
+    result[0] = malloc(sizeof(char) * (strlen(w1) + strlen(w2)));
 
     readString(w1);
     readString(w2);
 
     string_concat_dinamyc(w1, w2, result);
-    printf("El resultado de concatener los strings es: %s\n", *result);
+    printf("El resultado de concatener los strings es: %s\n", result[0]);
 
 }
 
 
 void string_concat_dinamyc(const char* w1, const char* w2, char** result)
 {
-    strcat(*result, w1);
-    strcat(*result, w2);
+    strcat(result[0], w1);
+    strcat(result[0], w2);
 }
 
