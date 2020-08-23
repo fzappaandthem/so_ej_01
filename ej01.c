@@ -7,7 +7,11 @@
 
 int main(void)
 {
+
 	puts("Borro el comment, y genero conflictos desde el repo local!");
+
+    puts("Generando conflictos!!!");
+
     puts("punto 1: concatenar dos strings");
     concatenarDosStrings();
     puts("punto 2: concatenar dos strings dinamicamente");
