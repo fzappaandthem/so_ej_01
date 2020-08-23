@@ -3,57 +3,7 @@
  *     Autor = Gastón Di Filippo
  */
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
-#define SIZE 50
-
-/* 
-*   Retorna un String nuevo que es la concatenación
-*   de los dos Strings pasados por parámetro
-*   Ejemplo:
-*   char* nombre = "Ritchie";
-*   char* saludo = string_concat("Hola ", nombre);
-*   =>
-*   saludo = "Hola Ritchie"
-*/
-void concatenarDosStrings();
-
-/*
-*   Asigna en el tercer parámetro, la concatenación
-*   de los primeros dos Strings
-*   Ejemplo:
-*   char* nombre = "Ritchie";
-*   char* saludo;
-*   string_concat("Hola ", nombre, &saludo);
-*   =>
-*   saludo = "Hola Ritchie"
-*/
-void concatenarDosStringsEnElTercerParametro();
-
-/*
-*   Separa el mail en un usuario y un dominio.
-*   Ejemplo:
-*   char* mail = "ritchie@ansic.com.ar";
-*   char* user;
-*   char* dominio;
-*   mail_split(mail, &user, &dominio);
-*   =>
-*   user = "ritchie"
-*   dominio = "ansic.com.ar"
-*/
-void separarMailDeDominio();
-
-void mail_split(char * restrict mail, char** user, char** dominio);
-
-char result_1[SIZE*2];
-void leerTextoAConcatenar(char *input);
-void readString(char*);
-
-char* string_concat(const char*, const char*);
-void string_concat_dinamyc(const char*, const char*, char**);
-
+#include "ej01.h"
 
 int main(void)
 {
@@ -65,7 +15,6 @@ int main(void)
     separarMailDeDominio();
     return 0 ;
 }
-
 
 void concatenarDosStrings()
 {
@@ -136,7 +85,7 @@ void separarMailDeDominio()
     printf("User: %s\tDominio: %s\n", user[0], dominio[0]);
 }
 
-//strchr(const char* s, int c); -> SI encuentra el caracter c en s, devuelve c y todo lo que sigue en el string (si entra)
+//strchr(const char* s, int c); -> SI encuentra el caracter c en s, devuelve c y todo lo que sigue en el string (de no haber overflow)
 
 /*
     El dominio se podía obtener de la siguiente manera
