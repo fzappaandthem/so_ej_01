@@ -4,9 +4,10 @@
  */
 
 #include "ej01.h"
-//Agrego este comentario desde https://github.com
+
 int main(void)
 {
+	puts("Borro el comment, y genero conflictos desde el repo local!");
     puts("punto 1: concatenar dos strings");
     concatenarDosStrings();
     puts("punto 2: concatenar dos strings dinamicamente");
