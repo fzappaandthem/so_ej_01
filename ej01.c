@@ -7,6 +7,7 @@
 //Agrego este comentario desde https://github.com
 int main(void)
 {
+    puts("Generando conflictos!!!");
     puts("punto 1: concatenar dos strings");
     concatenarDosStrings();
     puts("punto 2: concatenar dos strings dinamicamente");
